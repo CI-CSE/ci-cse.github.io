@@ -1,0 +1,8 @@
+cicse:
+  # Absolute URL to the CI-CSE homepage
+  url: "https://ci-cse.github.io"
+  # How the CI-CSE page is referred to in the top bar
+  title: "CI-CSE"
+  # Show the link to CI-CSE homepage in the top bar?
+  bar_link: true
+  nav_links: []

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>{{ page.title }} - {{ site.title }}</title>
+		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+		<link rel="stylesheet" href="{{ "/assets/css/highlight.css" | relative_url }}">
+	</head>
+	<body class="flex">
+		<div class="flex-1 flex flex-row-reverse">
+			{% if page.collection and page.collection != 'posts' %}
+				<nav class="w-[16rem]">
+					<div class="h-20 bg-gradient-to-tl from-red-50"></div>
+					<ul class="bg-gradient-to-bl from-red-50 pb-6">
+						{% for p in site[page.collection] %}
+							<li>
+								{% unless p == page %}
+									<a
+										href="{{ p.url | relative_url }}"
+													class="min-h-8 pl-4 block flex items-center hover:bg-red-100"
+									>
+										{{ p.title }}
+									</a>
+								{% else %}
+									<span class="min-h-8 pl-4 flex items-center bg-red-100 align-middle">{{ p.title }}</span>
+								{% endunless %}
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+			{% endif %}
+		</div>
+		<div class="w-full md:w-[50rem]">
+			<header class="mx-auto w-full text-white">
+          <div class="pl-6 bg-red-900">
+            <a href="{{ "/" | relative_url }}" class="font-bold">{{ site.title }}</a>
+            {% if site.subtitle %}
+              — {{ site.subtitle }}.
+              {% if site.cicse.bar_link %}
+                Website of
+              {% endif %}
+            {% else %}
+              {% if site.cicse.bar_link %}
+                — website of
+              {% endif %}
+            {% endif %}
+            {% if site.cicse.bar_link %}
+              <a href="{{ site.cicse.url }}" class="font-bold">{{ site.cicse.title }}</a>.
+            {% endif %}
+          </div>
+				<ul class="pl-6 bg-red-700 h-16 flex items-center gap-6">
+					<li>
+						<a href="{{ "/" | relative_url }}">Home</a>
+					</li>
+          {% for nav in site.cicse.nav_links %}
+            <li>
+              <a href="{{ nav.link | relative_url }}">{{ nav.title }}</a>
+            </li>
+          {% endfor %}
+				</ul>
+			</header>
+
+      {{ content }}
+
+			{% if page.previous or page.next %}
+				<div class="flex w-[40rem] mx-auto mt-10 mb-10">
+					{% if page.previous %}
+						<a
+							href="{{ page.previous.url | relative_url }}"
+										class="block flex-1 text-red-800 hover:text-red-600 mr-4"
+						>
+							← Previous page <br>
+							<span class="font-bold">{{ page.previous.title }}</span>
+						</a>
+					{% else %}
+						<div></div>
+					{% endif%}
+
+					{% if page.previous and page.next %}
+						<div class="w-[1px] self-center h-6 bg-red-800"></div>
+					{% endif %}
+
+					{% if page.next %}
+						<a
+							href="{{ page.next.url | relative_url }}"
+										class="block flex-1 text-red-800 hover:text-red-600 text-right ml-4"
+						>
+							Next page → <br>
+							<span class="font-bold">{{ page.next.title }}</span>
+						</a>
+					{% else %}
+						<div></div>
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+
+		<div class="flex-1"></div>
+  </body>
+</html>

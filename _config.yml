@@ -1,0 +1,28 @@
+url: ""
+baseurl: ""
+title: "CI-CSE"
+subtitle: "Constructor Insitute Chair of Software Engineering"
+
+cicse:
+  bar_link: false
+
+theme: jekyll-theme-cicse
+
+liquid:
+  error_mode: strict
+  strict_filters: true
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+exclude:
+  - jekyll-theme-cicse
+  - README.md
+  - postcss.config.js
+  - package.json
+  - yarn.lock
+  - tailwind.config.js
+  - LICENSE

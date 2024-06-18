@@ -16,5 +16,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "rouge", ">= 4.3.0"
   spec.add_runtime_dependency "webrick", ">= 1.8.0"
   spec.add_runtime_dependency "jekyll-postcss-v2", "~> 1.0"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
   spec.add_runtime_dependency "json", ">= 2.7"
 end

@@ -1,17 +1,15 @@
 # jekyll-theme-cicse
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+This is a common theme used for the websites of CI-CSE.
 
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-cicse"
+gem "jekyll-theme-cicse",
+  git: 'https://github.com/CI-CSE/ci-cse.github.io',
+  glob: 'jekyll-theme-cicse/*.gemspec'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -24,17 +22,20 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install jekyll-theme-cicse
-
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+The theme uses [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag),
+so check <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md>
+and <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md>
+for some of the available configs.
+
+Check the [theme config file](./jekyll-theme-cicse/_config.yml) for the configs
+used by the theme itself.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-theme-cicse. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at
+<https://github.com/CI-CSE/ci-cse.github.io>.
 
 ## Development
 

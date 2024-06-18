@@ -1,7 +1,10 @@
 url: ""
 baseurl: ""
 title: "CI-CSE"
-subtitle: "Constructor Insitute Chair of Software Engineering"
+tagline: "Constructor Insitute Chair of Software Engineering"
+description: >-
+  Website of the Chair of Software Engineering at Constructor Institute.
+  Latest news about our research and projects.
 
 cicse:
   bar_link: false

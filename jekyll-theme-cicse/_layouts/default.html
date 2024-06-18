@@ -3,7 +3,9 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<title>{{ page.title }} - {{ site.title }}</title>
+
+    {% seo %}
+
 		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 	</head>
 	<body class="flex">
@@ -34,8 +36,8 @@
 			<header class="mx-auto w-full text-white">
           <div class="pl-6 bg-red-900">
             <a href="{{ "/" | relative_url }}" class="font-bold">{{ site.title }}</a>
-            {% if site.subtitle %}
-              — {{ site.subtitle }}.
+            {% if site.tagline %}
+              — {{ site.tagline }}.
               {% if site.cicse.bar_link %}
                 Website of
               {% endif %}

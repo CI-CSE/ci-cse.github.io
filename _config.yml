@@ -13,7 +13,7 @@ liquid:
   strict_filters: true
 
 plugins:
-  - jekyll-postcss
+  - jekyll-postcss-v2
 
 postcss:
   cache: false

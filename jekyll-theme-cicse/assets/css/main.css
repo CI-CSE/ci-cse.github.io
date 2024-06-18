@@ -7,6 +7,12 @@ layout: null
 @tailwind utilities;
 
 @layer components {
+    .prose {
+        @apply prose-headings:text-red-700;
+    }
+}
+
+@layer components {
     /*
     Rouge Github theme
     https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/themes/github.rb

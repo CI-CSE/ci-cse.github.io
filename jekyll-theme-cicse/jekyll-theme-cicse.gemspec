@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ilgiz Mustafin"]
   spec.email         = ["ilgimustafin@gmail.com"]
 
-  spec.summary       = "Jekyll theme for websites of CI-CSE"
+  spec.summary       = "Jekyll theme for websites of CI-SE"
   spec.homepage      = "https://github.com/CI-CSE/ci-cse/tree/main/jekyll-theme-cicse"
   spec.license       = "MIT"
 

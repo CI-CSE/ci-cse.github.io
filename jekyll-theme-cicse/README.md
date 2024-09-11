@@ -1,6 +1,6 @@
 # jekyll-theme-cicse
 
-This is a common theme used for the websites of CI-CSE.
+This is a common theme used for the websites of CIT-SE.
 
 ## Installation
 

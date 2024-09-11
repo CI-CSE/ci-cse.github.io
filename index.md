@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-# CI-CSE Homepage
+# CI-SE Homepage
 
-Welcome to the homepage of the Constructor Institute's
+Welcome to the homepage of the Constructor Institute of Technology's
 Chair of Software Engineering.

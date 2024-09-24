@@ -8,7 +8,7 @@ layout: null
 
 @layer components {
     .prose {
-        @apply prose-headings:text-red-700;
+        @apply prose-headings:text-blue-900;
     }
 }
 

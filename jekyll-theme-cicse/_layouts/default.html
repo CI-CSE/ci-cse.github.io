@@ -12,14 +12,14 @@
 		<div class="flex-1 flex flex-row-reverse">
 			{% if page.collection and page.collection != 'posts' %}
 				<nav class="w-[16rem]">
-					<div class="h-20 bg-gradient-to-tl from-red-50"></div>
-					<ul class="bg-gradient-to-bl from-red-50 pb-6">
+					<div class="h-20 bg-gradient-to-tl from-blue-50"></div>
+					<ul class="bg-gradient-to-bl from-blue-50 pb-6">
             {% for p in site[page.collection] %}
               <li>
                 {% unless p == page %}
                   <a
                     href="{{ p.url | relative_url }}"
-                    class="min-h-8 block flex items-center hover:bg-red-100
+                    class="min-h-8 block flex items-center hover:bg-blue-100
                           {% if p.is_index %} pl-2 font-bold
                           {% else %} pl-4
                           {% endif %}
@@ -28,7 +28,7 @@
                     {{ p.title }}
                   </a>
                 {% else %}
-                  <span class="min-h-8 flex items-center bg-red-100 align-middle
+                  <span class="min-h-8 flex items-center bg-blue-100 align-middle
                                {% if p.is_index %} pl-2 font-bold
                                {% else %} pl-4
                                {% endif %}
@@ -44,8 +44,10 @@
 		</div>
 		<div class="w-full md:w-[50rem]">
 			<header class="mx-auto w-full text-white">
-          <div class="pl-6 bg-red-900">
-            <a href="{{ "/" | relative_url }}" class="font-bold">{{ site.title }}</a>
+          <div class="pl-6 bg-blue-900">
+					<div class="inline-flex items-center">
+								<img src="{{'/assets/images/constructor_logo.png' | relative_url}}" alt="{{site.title}}" class="h-auto align-middle" style="height: 1em;">
+								<span class="ml-2">
             {% if site.tagline %}
               — {{ site.tagline }}.
               {% if site.cicse.bar_link %}
@@ -57,10 +59,12 @@
               {% endif %}
             {% endif %}
             {% if site.cicse.bar_link %}
-              <a href="{{ site.cicse.url }}" class="font-bold">{{ site.cicse.title }}</a>.
+							<img src="{{'/assets/images/constructor_logo.png' | relative_url}}" alt="{{site.title}}" class="h-auto align-middle" style="height: 1em;">.
             {% endif %}
+						</span>
+						</div>
           </div>
-				<ul class="pl-6 bg-red-700 h-16 flex items-center gap-6">
+				<ul class="pl-6 bg-blue-900 h-16 flex items-center gap-6">
 					<li>
 						<a href="{{ "/" | relative_url }}">Home</a>
 					</li>
@@ -79,7 +83,7 @@
 					{% if page.previous %}
 						<a
 							href="{{ page.previous.url | relative_url }}"
-										class="block flex-1 text-red-800 hover:text-red-600 mr-4"
+										class="block flex-1 text-blue-900 hover:text-blue-600 mr-4"
 						>
 							← Previous page <br>
 							<span class="font-bold">{{ page.previous.title }}</span>
@@ -89,13 +93,13 @@
 					{% endif%}
 
 					{% if page.previous and page.next %}
-						<div class="w-[1px] self-center h-6 bg-red-800"></div>
+						<div class="w-[1px] self-center h-6 bg-blue-900"></div>
 					{% endif %}
 
 					{% if page.next %}
 						<a
 							href="{{ page.next.url | relative_url }}"
-										class="block flex-1 text-red-800 hover:text-red-600 text-right ml-4"
+										class="block flex-1 text-blue-900 hover:text-blue-600 text-right ml-4"
 						>
 							Next page → <br>
 							<span class="font-bold">{{ page.next.title }}</span>

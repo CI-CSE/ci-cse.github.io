@@ -27,7 +27,7 @@ liquid:
   strict_filters: true
 
 plugins:
-  - jekyll-postcss-v2
+  - jekyll-tailwindcss
 
 postcss:
   cache: false

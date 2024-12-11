@@ -19,14 +19,6 @@ jobs:
         with:
           ruby-version: '3.2'
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 22.2
-
-      - name: yarn install
-        run: |
-          yarn install --frozen-lockfile
-
       - name: Build site
         uses: limjh16/jekyll-action-ts@v2
         with:

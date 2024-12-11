@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use a different style for collection pages which have `is_index`
 - Use `navy-blue` as the main color
+- Use `jekyll-tailwindcss` to drop node dependency
 
 ### Removed
 

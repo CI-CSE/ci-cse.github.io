@@ -23,6 +23,19 @@ And then execute:
     $ bundle
 
 ## Usage
+Specify this theme in your `_config.yml` file:
+
+``` yaml
+theme: jekyll-theme-cicse
+```
+
+Add the following plugins in `_config.yml`:
+
+``` yaml
+plugins:
+  - jekyll-tailwindcss # run tailwind compilation without node
+```
+The `jekyll-tailwindcss` plugin comes from a dependency of `jekyll-theme-cicse`.
 
 The theme uses [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag),
 so check <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md>

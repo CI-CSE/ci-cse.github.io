@@ -14,6 +14,7 @@ cicse:
 
 collections:
   people:
+    disable_menu: true
     output: true
     sort_by: title
     order:

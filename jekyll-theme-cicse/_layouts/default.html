@@ -9,9 +9,41 @@
 		<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 	</head>
 	<body class="flex">
-		<div class="flex-1 flex flex-row-reverse">
-		</div>
-		<div class="w-full md:w-[50rem]">
+    <div class="flex-1 flex flex-row-reverse">
+      {% assign col = site.collections | where: "label", page.collection | first %}
+      {% if page.collection and page.collection != 'posts' and col.disable_menu != true %}
+        <nav class="w-[16rem]">
+          <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
+          <ul class="bg-gradient-to-bl from-blue-50 pb-6">
+            {% for p in site[page.collection] %}
+              <li>
+                {% unless p == page %}
+                  <a
+                    href="{{ p.url | relative_url }}"
+                    class="min-h-8 block flex items-center hover:bg-blue-100
+                          {% if p.is_index %} pl-2 font-bold
+                          {% else %} pl-4
+                          {% endif %}
+                          "
+                  >
+                    {{ p.title }}
+                  </a>
+                {% else %}
+                  <span class="min-h-8 flex items-center bg-blue-100 align-middle
+                               {% if p.is_index %} pl-2 font-bold
+                               {% else %} pl-4
+                               {% endif %}
+                               ">
+                    {{ p.title }}
+                  </span>
+                {% endunless %}
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+    </div>
+    <div class="w-full md:w-[50rem]">
       <header class="mx-auto w-full text-white bg-navy-blue p-2">
         <a href="https://institute.constructor.org/">
           <img

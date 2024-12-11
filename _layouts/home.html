@@ -2,17 +2,32 @@
 layout: default
 ---
 
-<main>
-  <div class="prose mx-auto">
+<main class="max-w-prose mx-auto">
+  <div class="text-2xl text-graphene-black mt-6">
     {{ content }}
-
-    <h2>News</h2>
-
-    {% for p in site.posts %}
-      <a href="{{ p.url | relative_url }}"><h3>{{ p.title }}</h3></a>
-      <span>{{ p.date | date_to_long_string: "ordinal", "US" }}</span>
-
-      {{ p.excerpt | markdownify }}
-    {% endfor %}
   </div>
+
+  <h2 class="text-navy-blue text-3xl mt-8 font-bold mb-2">
+    News
+  </h2>
+
+  <ul>
+    {% for p in site.posts %}
+      <li>
+        <a
+          href="{{ p.url | relative_url }}"
+          class="text-navy-blue visited-revert block"
+        >
+          <h3 class="text-2xl">{{ p.title }}</h3>
+        </a>
+        <div class="mb-2">
+          {{ p.date | date_to_long_string: "ordinal", "US" }}
+        </div>
+
+        <div class="prose">
+          {{ p.excerpt | markdownify }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 </main>

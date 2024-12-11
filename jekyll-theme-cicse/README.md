@@ -32,6 +32,10 @@ for some of the available configs.
 Check the [theme config file](./jekyll-theme-cicse/_config.yml) for the configs
 used by the theme itself.
 
+### Collections
+Pages in [collections](https://jekyllrb.com/docs/collections/) render a TOC Table of Contents menu. It can be disabled
+by setting `disable_menu: true` in the collection in `_config.yml`.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at

@@ -6,10 +6,20 @@ layout: null
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .visited-revert {
+    @apply visited:text-[revert];
+  }
+}
+
 @layer components {
-    .prose {
-        @apply prose-headings:text-blue-900;
+  .prose {
+    @apply prose-headings:text-navy-blue;
+
+    a {
+      @apply visited-revert;
     }
+  }
 }
 
 @layer components {

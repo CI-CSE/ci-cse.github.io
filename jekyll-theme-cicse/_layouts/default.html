@@ -12,7 +12,7 @@
     <div class="flex-1 flex flex-row-reverse">
       {% assign col = site.collections | where: "label", page.collection | first %}
       {% if page.collection and page.collection != 'posts' and col.disable_menu != true %}
-        <nav class="w-[16rem]">
+        <nav class="hidden lg:block w-[16rem]">
           <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
           <ul class="bg-gradient-to-bl from-blue-50 pb-6">
             {% for p in site[page.collection] %}

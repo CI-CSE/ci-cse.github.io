@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use a different style for collection pages which have `is_index`
 - Use `navy-blue` as the main color
 - Use `jekyll-tailwindcss` to drop node dependency
+- Hide collection navigation column on small screens (less than Tailwind `lg` which is `1024px` wide)
 
 ### Removed
 

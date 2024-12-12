@@ -6,6 +6,13 @@ layout: null
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply no-underline;
+    @apply hover:underline;
+  }
+}
+
 @layer utilities {
   .visited-revert {
     @apply visited:text-[revert];
@@ -18,6 +25,8 @@ layout: null
 
     a {
       @apply visited-revert;
+      @apply no-underline;
+      @apply hover:underline;
     }
   }
 }

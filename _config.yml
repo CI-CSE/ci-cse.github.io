@@ -6,6 +6,11 @@ description: >-
   at Constructor Institute of Technology.
   Latest news about our research and projects.
 
+permalink: /:categories/:year/:month/:day/:title
+plugins:
+  - jekyll-redirect-from
+
+theme: jekyll-theme-cicse
 cicse:
   bar_link: false
   nav_links:
@@ -19,14 +24,10 @@ collections:
     order:
       - index.md
 
-theme: jekyll-theme-cicse
 
 liquid:
   error_mode: strict
   strict_filters: true
-
-postcss:
-  cache: false
 
 exclude:
   - jekyll-theme-cicse

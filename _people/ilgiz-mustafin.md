@@ -1,5 +1,7 @@
 ---
 layout: page
+redirect_from:
+  - /people/ilgiz-mustafin.html
 ---
 # Ilgiz Mustafin
 Ilgiz Mustafin is a PhD Student at the Chair of Software Engineering, Constructor Institute of Technology.

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Two program repair benchmarks translated to Eiffel
+redirect_from:
+  - /2024/06/17/two-apr-benchmarks-eiffel.html
 ---
 Two datasets of programs with bugs were translated to Eiffel
 and fully verified with AutoProof. Downloads are available at

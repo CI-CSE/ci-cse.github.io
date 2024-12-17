@@ -1,5 +1,7 @@
 ---
 layout: page
+redirect_from:
+  - /people/li-huang.html
 ---
 # Li Huang
 Li Huang is a PhD Student at the Chair of Software Engineering, Constructor Institute of Technology.

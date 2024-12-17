@@ -1,5 +1,7 @@
 ---
 layout: page
+redirect_from:
+  - /people/reto-weber.html
 ---
 # Reto Weber
 Reto Weber is a PhD Student at the Chair of Software Engineering, Constructor Institute of Technology.

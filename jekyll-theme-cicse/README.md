@@ -29,21 +29,35 @@ Specify this theme in your `_config.yml` file:
 theme: jekyll-theme-cicse
 ```
 
-Add the following plugins in `_config.yml`:
+Check the [theme config file](./jekyll-theme-cicse/_config.yml) for the configs
+used by the theme itself.
 
-``` yaml
-plugins:
-  - jekyll-tailwindcss # run tailwind compilation without node
-```
-The `jekyll-tailwindcss` plugin comes from a dependency of `jekyll-theme-cicse`.
+## Styling and Tailwind
+This theme uses
+[`jekyll-tailwindcss`](https://github.com/vormwald/jekyll-tailwindcss) which
+allows you to use [Tailwind CSS](https://tailwindcss.com/) without `node`.
+
+The `tailwind.config.js` is included in the theme,
+so you do not need to create it yourself.
+
+Tailwind is configured to collect CSS classes all `*.html` files
+located under `_site`. This has the benefit that only used classes
+are included in the final CSS.
+
+### Double build required!
+A minor drawback of this approach is that all HTML files must be generated
+before the CSS. Currently this is not implemented. This means that:
+* In local development newly added CSS classes might not work on the first save
+  (assuming livereload), but will work on the second save
+* During deployment site needs to be built twice to ensure that CSS generator
+  runs after all HTML pages.
+
+### SEO
 
 The theme uses [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag),
 so check <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md>
 and <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md>
 for some of the available configs.
-
-Check the [theme config file](./jekyll-theme-cicse/_config.yml) for the configs
-used by the theme itself.
 
 ### Collections
 Pages in [collections](https://jekyllrb.com/docs/collections/) render a TOC Table of Contents menu. It can be disabled

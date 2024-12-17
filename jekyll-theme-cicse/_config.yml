@@ -10,3 +10,11 @@ cicse:
   # * link - local path. It will be passed to the `relative_url` filter
   # * title - text of the link
   nav_links: []
+
+
+tailwindcss:
+  config: 'gem:jekyll-theme-cicse/tailwind.config.js'
+
+gem_resolver:
+  transform:
+    - tailwind.config

@@ -25,9 +25,6 @@ liquid:
   error_mode: strict
   strict_filters: true
 
-plugins:
-  - jekyll-tailwindcss
-
 postcss:
   cache: false
 

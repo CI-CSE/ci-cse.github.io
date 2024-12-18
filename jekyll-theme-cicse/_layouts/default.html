@@ -78,10 +78,10 @@
             {% if page.previous %}
               <a
                 href="{{ page.previous.url | relative_url }}"
-                class="block flex-1 text-navy-blue visited-revert hover:underline"
+                class="block flex-1 base-link"
               >
-                ← Previous page <br>
-                <span class="font-bold">{{ page.previous.title }}</span>
+                <span class="font-normal">← Previous page</span><br>
+                {{ page.previous.title }}
               </a>
             {% else %}
               <div></div>
@@ -94,10 +94,10 @@
             {% if page.next %}
               <a
                 href="{{ page.next.url | relative_url }}"
-                class="block flex-1 text-navy-blue visited-revert hover:underline text-right"
+                class="block flex-1 base-link text-right"
               >
-                Next page → <br>
-                <span class="font-bold">{{ page.next.title }}</span>
+                <span class="font-normal">Next page →</span><br>
+                {{ page.next.title }}
               </a>
             {% else %}
               <div></div>

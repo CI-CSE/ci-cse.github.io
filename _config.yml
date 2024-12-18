@@ -9,6 +9,7 @@ description: >-
 permalink: /:categories/:year/:month/:day/:title
 plugins:
   - jekyll-redirect-from
+  - jekyll_picture_tag
 
 theme: jekyll-theme-cicse
 cicse:
@@ -16,6 +17,8 @@ cicse:
   nav_links:
     - link: 'people'
       title: People
+    - link: 'publications'
+      title: Publications
 
 collections:
   people:
@@ -23,6 +26,11 @@ collections:
     sort_by: title
     order:
       - index.md
+  publications:
+    output: true
+    sort_by: date
+    order:
+      - index.html
 
 
 liquid:
@@ -37,3 +45,4 @@ exclude:
   - yarn.lock
   - tailwind.config.js
   - LICENSE
+  - .github

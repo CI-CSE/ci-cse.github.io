@@ -7,16 +7,16 @@ layout: default
     {{ content }}
   </div>
 
-  <h2 class="text-navy-blue text-3xl mt-8 font-bold mb-2">
+  <h2 class="text-navy-blue text-3xl mt-8 font-extrabold mb-2">
     News
   </h2>
 
   <ul>
     {% for p in site.posts %}
-      <li>
+      <li class="pb-6 block">
         <a
           href="{{ p.url | relative_url }}"
-          class="text-navy-blue visited-revert block"
+          class="visited-revert block font-bold base-link"
         >
           <h3 class="text-2xl">{{ p.title }}</h3>
         </a>

@@ -13,8 +13,12 @@ cicse:
 
 
 tailwindcss:
+  # Specify the location of tailwind.config.js
+  # By default, use tailwind.config.js from the gem
+  # (using jekyll-gem-resolver for the `gem:` syntax)
   config: 'gem:jekyll-theme-cicse/tailwind.config.js'
 
+# Configure jekyll-gem-resolver to replace `gem:` with the actual gem location
 gem_resolver:
   transform:
-    - tailwind.config
+    - tailwindcss.config

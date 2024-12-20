@@ -18,6 +18,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "webrick", ">= 1.8.0"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
   spec.add_runtime_dependency "json", ">= 2.7"
-  spec.add_runtime_dependency 'jekyll-tailwindcss'
+  spec.add_runtime_dependency 'jekyll-tailwindcss', '~> 0.5'
   spec.add_runtime_dependency 'jekyll-gem-resolver', '~> 1.1'
 end

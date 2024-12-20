@@ -23,15 +23,18 @@ cicse:
 collections:
   people:
     output: true
-    sort_by: title
     order:
       - index.md
+      # Unspecified pages are ordered by file names
+      # which is we want for this collection
+
   publications:
     output: true
-    sort_by: date
     order:
       - index.html
-
+      # Order papers by publication date, newest first
+      - execution-free-program-repair.md
+      - concept-of-class-invariant-in-oop.md
 
 liquid:
   error_mode: strict

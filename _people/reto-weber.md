@@ -1,5 +1,6 @@
 ---
 layout: page
+author_id: reto-weber
 redirect_from:
   - /people/reto-weber.html
 ---

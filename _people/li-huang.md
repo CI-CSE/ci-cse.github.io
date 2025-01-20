@@ -1,5 +1,6 @@
 ---
 layout: page
+author_id: li-huang
 redirect_from:
   - /people/li-huang.html
 ---

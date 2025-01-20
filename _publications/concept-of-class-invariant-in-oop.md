@@ -4,6 +4,7 @@ title: The concept of class invariant in object-oriented programming
 date: 2024-03-20
 authors:
   - name: Bertrand Meyer
+    author: bertrand-meyer
   - name: Alisa Arkadova
   - name: Alexander Kogtenkov
 links:

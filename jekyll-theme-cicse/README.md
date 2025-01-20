@@ -63,6 +63,29 @@ for some of the available configs.
 Pages in [collections](https://jekyllrb.com/docs/collections/) render a TOC Table of Contents menu. It can be disabled
 by setting `disable_menu: true` in the collection in `_config.yml`.
 
+### Post authors
+You can specify the author of a post by setting the `author` key in post's front matter.
+
+If you have a Jekyll page for the author in the site, then you can link
+the author page. The page **must** be in the `people` collection.
+Set `author_id` to any value in the author page's front matter
+and use the same value in the post's `author` value.
+
+For example, if Alice has a page `_people/alice-personal.md` with `author_id` in the front matter:
+``` markdown
+---
+author_id: alice
+---
+```
+
+Then you can link her page as a post author in the post's front matter using her `author_id`:
+``` markdown
+---
+author: alice
+---
+```
+
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at

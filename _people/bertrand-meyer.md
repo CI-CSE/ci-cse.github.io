@@ -1,5 +1,6 @@
 ---
 layout: page
+author_id: bertrand-meyer
 redirect_from:
   - /people/bertrand-meyer.html
 ---

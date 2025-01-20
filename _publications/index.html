@@ -13,19 +13,38 @@ is_index: true
       {% unless publication.is_index %}
         <li class="mb-4">
           <div class="flex">
+            <div class="grow">
               <a
-                class="base-link grow"
+                class="base-link text-xl"
                 href="{{ publication.url | relative_url }}"
               >
-                  {{ publication.title }}
+                {{ publication.title }}
               </a>
-              <ul class="inline">
-                  {% for link in publication.links %}
-                      <li class="inline-block"><a class="base-link" href="{{ link.last }}">[{{ link.first }}]</a></li>
-                  {% endfor %}
+              <ul>
+                {% for author in publication.authors %}
+                  <li class="inline-block">
+                    {% if author.author %}
+                      {% assign author_page = site.people | where: "author_id", author.author | first %}
+                    {% else %}
+                      {% assign author_page = nil %}
+                    {% endif %}
+
+                    {% if author_page %}
+                      <a href="{{ author_page.url | relative_url }}" class="base-link">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
+                    {% else %}
+                      {{ author.name }}{% unless forloop.last %},{% endunless %}
+                    {% endif %}
+                  </li>
+                {% endfor %}
               </ul>
+              {{ publication.date | date: "%Y" }}
+            </div>
+            <ul class="text-right">
+              {% for link in publication.links %}
+                <li><a class="base-link" href="{{ link.last }}">[{{ link.first }}]</a></li>
+              {% endfor %}
+            </ul>
           </div>
-          {{ publication.authors | map: 'name' | join: ', '}}, {{ publication.date | date: "%Y" }}
         </li>
       {% endunless %}
     {% endfor %}

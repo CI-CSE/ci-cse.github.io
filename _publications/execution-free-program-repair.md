@@ -4,8 +4,11 @@ title: Execution-Free Program Repair
 date: 2024-07-10
 authors:
   - name: Li Huang
+    author: li-huang
   - name: Bertrand Meyer
+    author: bertrand-meyer
   - name: Ilgiz Mustafin
+    author: ilgiz-mustafin
   - name: Manuel Oriol
 links:
   arxiv: https://arxiv.org/abs/2405.01309

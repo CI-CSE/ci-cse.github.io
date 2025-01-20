@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Two program repair benchmarks translated to Eiffel
+author: ilgiz-mustafin
 redirect_from:
   - /2024/06/17/two-apr-benchmarks-eiffel.html
 ---

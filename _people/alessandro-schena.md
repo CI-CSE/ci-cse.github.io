@@ -1,5 +1,6 @@
 ---
 layout: page
+author_id: alessandro-schena
 redirect_from:
   - /people/alessandro-schena.html
 ---

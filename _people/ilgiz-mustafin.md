@@ -1,4 +1,5 @@
 ---
+author_id: ilgiz-mustafin
 layout: page
 redirect_from:
   - /people/ilgiz-mustafin.html

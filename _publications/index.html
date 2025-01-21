@@ -8,7 +8,10 @@ is_index: true
   Publications
 </h1>
 
-{% assign by_year = site.publications | where_exp: "x", "x.is_index == nil" | group_by_exp: "x", "x.date | date: '%Y'" %}
+{% assign by_year = site.publications
+  | where_exp: "x", "x.is_index == nil"
+  | reverse
+  | group_by_exp: "x", "x.date | date: '%Y'" %}
 {% for publications in by_year %}
   <h2 class="text-3xl text-navy-blue font-black">
     {{ publications.name }}

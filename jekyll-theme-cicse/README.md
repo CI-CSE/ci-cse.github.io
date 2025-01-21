@@ -60,8 +60,36 @@ and <https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md
 for some of the available configs.
 
 ### Collections
-Pages in [collections](https://jekyllrb.com/docs/collections/) render a TOC Table of Contents menu. It can be disabled
-by setting `disable_menu: true` in the collection in `_config.yml`.
+This theme provides additional features for [Jekyll collections](https://jekyllrb.com/docs/collections/).
+
+Keep in mind that `site.posts` is also a collection. However,
+the Table of Contents menu is disabled for posts.
+
+#### Disable menu
+Pages in [collections](https://jekyllrb.com/docs/collections/) render a Table of Contents menu.
+It can be disabled by setting `disable_menu: true` in the collection in `_config.yml`.
+
+#### Reverse order for menu and previous/next links
+Menu and the previous/next page links at the bottom of collection pages can
+use the reverse order of pages. To enable it set `reverse_navigation: true`
+in the collection in `_config.yml`.
+
+The `reverse_navigation` option does not change the actual order
+in the collection, so you might need to reverse the order
+if you iterate the collection yourself. Suppose you have a collection for papers:
+``` yaml
+collections:
+  papers:
+    sort_by: date # ascending order by default in Jekyll
+```
+
+Then to show a list of papers with newest at the top you would still
+need to iterate the list in the reverse order:
+``` markdown
+{% for paper in site.papers reversed %}
+* {{ paper.title }}
+{% endfor}
+```
 
 ### Post authors
 You can specify the author of a post by setting the `author` key in post's front matter.

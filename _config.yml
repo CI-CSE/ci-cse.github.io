@@ -30,8 +30,11 @@ collections:
 
   publications:
     output: true
-    order:
-      - index.html
+    reverse_navigation: true
+    sort_by: date
+    # index.md will have the time of compilation
+    # which should be greater than all papers,
+    # so with reverse_navigation it will appear as the first page
 
 liquid:
   error_mode: strict

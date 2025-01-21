@@ -22,7 +22,7 @@ layout: default
         </a>
         <div class="mb-2">
           <span>
-            {{ p.date | date_to_long_string: "ordinal", "US" }}
+            {{ p.date | date_to_long_string }}
           </span>
           {% if p.author %}
             {% assign author = site.people | where: "author_id", p.author | first %}

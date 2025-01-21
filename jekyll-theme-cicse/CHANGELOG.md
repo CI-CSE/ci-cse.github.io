@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `jekyll-tailwindcss` to drop node dependency
 - Hide collection navigation column on small screens (less than Tailwind `xl` which is `1280px` wide)
 - Specify tailwind plugin in theme config instead of asking to configure it in site config
+- Do not use ordinal for post date [#5]
 
 ### Removed
 

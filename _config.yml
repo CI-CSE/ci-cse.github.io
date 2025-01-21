@@ -32,9 +32,6 @@ collections:
     output: true
     order:
       - index.html
-      # Order papers by publication date, newest first
-      - execution-free-program-repair.md
-      - concept-of-class-invariant-in-oop.md
 
 liquid:
   error_mode: strict

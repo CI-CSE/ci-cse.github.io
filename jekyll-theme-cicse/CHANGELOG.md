@@ -23,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   'graphene-black': '#0a0a0a'
   ```
 - Ability to specify post authors with optional link to site's author page [#5]
+- Ability to flip the order of menu and previous/next links in collections using
+  `reverse_navigation: true` [#5]
 
 ### Changed
 

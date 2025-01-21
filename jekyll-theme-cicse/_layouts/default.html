@@ -15,7 +15,11 @@
         <nav class="hidden xl:block w-[16rem]">
           <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
           <ul class="bg-gradient-to-bl from-blue-50 pb-6">
-            {% for p in site[page.collection] %}
+            {% assign pages = site[page.collection] %}
+            {% if col.reverse_navigation %}
+              {% assign pages = pages | reverse %}
+            {% endif %}
+            {% for p in pages %}
               <li>
                 {% unless p == page %}
                   <a
@@ -74,30 +78,37 @@
         {{ content }}
 
         {% if page.previous or page.next %}
+          {% unless col.reverse_navigation %}
+            {% assign prev = page.previous %}
+            {% assign next = page.next %}
+          {% else %}
+            {% assign prev = page.next %}
+            {% assign next = page.previous %}
+          {% endunless %}
           <div class="flex md:w-[40rem] mx-auto mt-10 mb-10">
-            {% if page.previous %}
+            {% if prev %}
               <a
-                href="{{ page.previous.url | relative_url }}"
+                href="{{ prev.url | relative_url }}"
                 class="block flex-1 base-link"
               >
                 <span class="font-normal">← Previous page</span><br>
-                {{ page.previous.title }}
+                {{ prev.title }}
               </a>
             {% else %}
               <div></div>
-            {% endif%}
+            {% endif %}
 
-            {% if page.previous and page.next %}
+            {% if prev and next %}
               <div class="hidden md:block w-[1px] self-center h-6 bg-navy-blue"></div>
             {% endif %}
 
-            {% if page.next %}
+            {% if next %}
               <a
-                href="{{ page.next.url | relative_url }}"
+                href="{{ next.url | relative_url }}"
                 class="block flex-1 base-link text-right"
               >
                 <span class="font-normal">Next page →</span><br>
-                {{ page.next.title }}
+                {{ next.title }}
               </a>
             {% else %}
               <div></div>

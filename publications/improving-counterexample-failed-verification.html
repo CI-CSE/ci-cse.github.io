@@ -5,9 +5,15 @@
     <meta charset="utf-8" />
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>Execution-Free Program Repair | Chair of Software Engineering</title>
+    <title>
+      Improving Counterexample Quality from Failed Program Verification | Chair
+      of Software Engineering
+    </title>
     <meta name="generator" content="Jekyll v4.3.3" />
-    <meta property="og:title" content="Execution-Free Program Repair" />
+    <meta
+      property="og:title"
+      content="Improving Counterexample Quality from Failed Program Verification"
+    />
     <meta name="author" content="Li Huang" />
     <meta property="og:locale" content="en_US" />
     <meta
@@ -18,33 +24,39 @@
       property="og:description"
       content="Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects."
     />
-    <link rel="canonical" href="/publications/execution-free-program-repair" />
+    <link
+      rel="canonical"
+      href="/publications/improving-counterexample-failed-verification"
+    />
     <meta
       property="og:url"
-      content="/publications/execution-free-program-repair"
+      content="/publications/improving-counterexample-failed-verification"
     />
     <meta property="og:site_name" content="Chair of Software Engineering" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-07-10T00:00:00+00:00"
+      content="2022-10-31T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Execution-Free Program Repair" />
+    <meta
+      property="twitter:title"
+      content="Improving Counterexample Quality from Failed Program Verification"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Li Huang" },
-        "dateModified": "2024-07-10T00:00:00+00:00",
-        "datePublished": "2024-07-10T00:00:00+00:00",
+        "dateModified": "2022-10-31T00:00:00+00:00",
+        "datePublished": "2022-10-31T00:00:00+00:00",
         "description": "Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects.",
-        "headline": "Execution-Free Program Repair",
+        "headline": "Improving Counterexample Quality from Failed Program Verification",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/publications/execution-free-program-repair"
+          "@id": "/publications/improving-counterexample-failed-verification"
         },
-        "url": "/publications/execution-free-program-repair"
+        "url": "/publications/improving-counterexample-failed-verification"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -95,11 +107,12 @@
           </li>
 
           <li>
-            <span
-              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
+            <a
+              href="/publications/execution-free-program-repair"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
             >
               Execution-Free Program Repair
-            </span>
+            </a>
           </li>
 
           <li>
@@ -121,12 +134,11 @@
           </li>
 
           <li>
-            <a
-              href="/publications/improving-counterexample-failed-verification"
-              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            <span
+              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
             >
               Improving Counterexample Quality from Failed Program Verification
-            </a>
+            </span>
           </li>
         </ul>
       </nav>
@@ -163,7 +175,8 @@
           <div class="flex mb-2">
             <div class="grow">
               <h1 class="text-2xl text-navy-blue font-black">
-                Execution-Free Program Repair
+                Improving Counterexample Quality from Failed Program
+                Verification
               </h1>
 
               <ul class="inline-block">
@@ -177,20 +190,14 @@
                   >,
                 </li>
 
-                <li class="inline-block">
-                  <a href="/people/ilgiz-mustafin" class="base-link"
-                    >Ilgiz Mustafin</a
-                  >,
-                </li>
-
                 <li class="inline-block">Manuel Oriol</li>
               </ul>
 
-              <p>10 July 2024</p>
+              <p>31 October 2022</p>
             </div>
             <ul class="text-right">
               <li class="ml-auto">
-                <a class="base-link" href="https://arxiv.org/abs/2405.01309"
+                <a class="base-link" href="https://arxiv.org/abs/2208.10492"
                   >[arxiv]</a
                 >
               </li>
@@ -198,8 +205,8 @@
               <li class="ml-auto">
                 <a
                   class="base-link"
-                  href="https://dl.acm.org/doi/abs/10.1145/3663529.3663789"
-                  >[acm]</a
+                  href="https://ieeexplore.ieee.org/abstract/document/9985046"
+                  >[ieee]</a
                 >
               </li>
             </ul>
@@ -207,39 +214,34 @@
 
           <div class="prose">
             <p>
-              Automatic program repair usually relies heavily on test cases for
-              both bug identification and fix validation. The issue is that
-              writing test cases is tedious, running them takes much time, and
-              validating a fix through tests does not guarantee its correctness.
-              The novel idea in the Proof2Fix methodology and tool presented
-              here is to rely instead on a program prover, without the need to
-              run tests or to run the program at all. Results show that
-              Proof2Fix automatically finds and fixes significant historical
-              bugs.
+              In software verification, a successful automated program proof is
+              the ultimate triumph. The road to such success is, however, paved
+              with many failed proof attempts. The message produced by the
+              prover when a proof fails is often obscure, making it very hard to
+              know how to proceed further. The work reported here attempts to
+              help in such cases by providing immediately understandable
+              counterexamples. To this end, it introduces an approach called
+              Counterexample Extraction and Minimization (CEAM). When a proof
+              fails, CEAM turns the counterexample model generated by the prover
+              into a a clearly understandable version; it can in addition
+              simplify the counterexamples further by minimizing the integer
+              values they contain. We have implemented the CEAM approach as an
+              extension to the AutoProof verifier and demonstrate its
+              application to a collection of examples.
             </p>
           </div>
         </main>
 
         <div class="flex md:w-[40rem] mx-auto mt-10 mb-10">
           <a
-            href="/publications/mcdc-better-tests-proofs"
+            href="/publications/failed-proof-yield-useful-test"
             class="block flex-1 base-link"
           >
             <span class="font-normal">← Previous page</span><br />
-            Is MCDC Really Better? Lessons from Combining Tests and Proofs
+            A failed proof can yield a useful test
           </a>
 
-          <div
-            class="hidden md:block w-[1px] self-center h-6 bg-navy-blue"
-          ></div>
-
-          <a
-            href="/publications/concept-of-class-invariant-in-oop"
-            class="block flex-1 base-link text-right"
-          >
-            <span class="font-normal">Next page →</span><br />
-            The concept of class invariant in object-oriented programming
-          </a>
+          <div></div>
         </div>
       </div>
     </div>

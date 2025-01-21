@@ -65,7 +65,7 @@
   </head>
   <body class="flex">
     <div class="flex-1 flex flex-row-reverse">
-      <nav class="hidden lg:block w-[16rem]">
+      <nav class="hidden xl:block w-[16rem]">
         <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
         <ul class="bg-gradient-to-bl from-blue-50 pb-6">
           <li>
@@ -74,6 +74,35 @@
               class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-2 font-bold"
             >
               Publications
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/publications/seeding-contradiction-full-coverage"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              Seeding Contradiction: a Fast Method for Generating Full-Coverage
+              Test Suites
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/publications/bugfix-language-for-automatic-program-repair"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              BUGFIX: towards a common language and framework for the Automatic
+              Program Repair community
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/publications/mcdc-better-tests-proofs"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              Is MCDC Really Better? Lessons from Combining Tests and Proofs
             </a>
           </li>
 
@@ -92,6 +121,24 @@
             >
               The concept of class invariant in object-oriented programming
             </span>
+          </li>
+
+          <li>
+            <a
+              href="/publications/failed-proof-yield-useful-test"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              A failed proof can yield a useful test
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/publications/improving-counterexample-failed-verification"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              Improving Counterexample Quality from Failed Program Verification
+            </a>
           </li>
         </ul>
       </nav>
@@ -125,33 +172,34 @@
 
       <div class="p-2">
         <main class="max-w-prose mx-auto">
-          <h1 class="text-3xl text-navy-blue font-black mb-4">
-            The concept of class invariant in object-oriented programming
-          </h1>
+          <div class="flex mb-2">
+            <div class="grow">
+              <h1 class="text-2xl text-navy-blue font-black">
+                The concept of class invariant in object-oriented programming
+              </h1>
 
-          <span class="mb-2 inline-block">
-            By:
-            <ul class="inline">
-              <li class="inline-block">Bertrand Meyer</li>
-              ,
+              <ul class="inline-block">
+                <li class="inline-block">
+                  <a href="/people/bertrand-meyer" class="base-link"
+                    >Bertrand Meyer</a
+                  >,
+                </li>
 
-              <li class="inline-block">Alisa Arkadova</li>
-              ,
+                <li class="inline-block">Alisa Arkadova,</li>
 
-              <li class="inline-block">Alexander Kogtenkov</li>
-            </ul>
-          </span>
+                <li class="inline-block">Alexander Kogtenkov</li>
+              </ul>
 
-          <div class="flex flex-row w-full mb-4">
-            <span class="grow"> 20 March 2024 </span>
-            <ul class="inline">
-              <li class="inline-block">
+              <p>20 March 2024</p>
+            </div>
+            <ul class="text-right">
+              <li class="ml-auto">
                 <a class="base-link" href="https://arxiv.org/abs/2109.06557"
                   >[arxiv]</a
                 >
               </li>
 
-              <li class="inline-block">
+              <li class="ml-auto">
                 <a
                   class="base-link"
                   href="https://dl.acm.org/doi/full/10.1145/3626201"
@@ -201,7 +249,17 @@
             Execution-Free Program Repair
           </a>
 
-          <div></div>
+          <div
+            class="hidden md:block w-[1px] self-center h-6 bg-navy-blue"
+          ></div>
+
+          <a
+            href="/publications/failed-proof-yield-useful-test"
+            class="block flex-1 base-link text-right"
+          >
+            <span class="font-normal">Next page →</span><br />
+            A failed proof can yield a useful test
+          </a>
         </div>
       </div>
     </div>

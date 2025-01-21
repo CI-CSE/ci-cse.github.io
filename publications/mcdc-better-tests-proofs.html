@@ -5,9 +5,15 @@
     <meta charset="utf-8" />
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>Execution-Free Program Repair | Chair of Software Engineering</title>
+    <title>
+      Is MCDC Really Better? Lessons from Combining Tests and Proofs | Chair of
+      Software Engineering
+    </title>
     <meta name="generator" content="Jekyll v4.3.3" />
-    <meta property="og:title" content="Execution-Free Program Repair" />
+    <meta
+      property="og:title"
+      content="Is MCDC Really Better? Lessons from Combining Tests and Proofs"
+    />
     <meta name="author" content="Li Huang" />
     <meta property="og:locale" content="en_US" />
     <meta
@@ -18,33 +24,33 @@
       property="og:description"
       content="Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects."
     />
-    <link rel="canonical" href="/publications/execution-free-program-repair" />
-    <meta
-      property="og:url"
-      content="/publications/execution-free-program-repair"
-    />
+    <link rel="canonical" href="/publications/mcdc-better-tests-proofs" />
+    <meta property="og:url" content="/publications/mcdc-better-tests-proofs" />
     <meta property="og:site_name" content="Chair of Software Engineering" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-07-10T00:00:00+00:00"
+      content="2024-09-10T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Execution-Free Program Repair" />
+    <meta
+      property="twitter:title"
+      content="Is MCDC Really Better? Lessons from Combining Tests and Proofs"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Li Huang" },
-        "dateModified": "2024-07-10T00:00:00+00:00",
-        "datePublished": "2024-07-10T00:00:00+00:00",
+        "dateModified": "2024-09-10T00:00:00+00:00",
+        "datePublished": "2024-09-10T00:00:00+00:00",
         "description": "Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects.",
-        "headline": "Execution-Free Program Repair",
+        "headline": "Is MCDC Really Better? Lessons from Combining Tests and Proofs",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/publications/execution-free-program-repair"
+          "@id": "/publications/mcdc-better-tests-proofs"
         },
-        "url": "/publications/execution-free-program-repair"
+        "url": "/publications/mcdc-better-tests-proofs"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -86,20 +92,20 @@
           </li>
 
           <li>
-            <a
-              href="/publications/mcdc-better-tests-proofs"
-              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
-            >
-              Is MCDC Really Better? Lessons from Combining Tests and Proofs
-            </a>
-          </li>
-
-          <li>
             <span
               class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
             >
-              Execution-Free Program Repair
+              Is MCDC Really Better? Lessons from Combining Tests and Proofs
             </span>
+          </li>
+
+          <li>
+            <a
+              href="/publications/execution-free-program-repair"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            >
+              Execution-Free Program Repair
+            </a>
           </li>
 
           <li>
@@ -163,7 +169,7 @@
           <div class="flex mb-2">
             <div class="grow">
               <h1 class="text-2xl text-navy-blue font-black">
-                Execution-Free Program Repair
+                Is MCDC Really Better? Lessons from Combining Tests and Proofs
               </h1>
 
               <ul class="inline-block">
@@ -177,28 +183,16 @@
                   >,
                 </li>
 
-                <li class="inline-block">
-                  <a href="/people/ilgiz-mustafin" class="base-link"
-                    >Ilgiz Mustafin</a
-                  >,
-                </li>
-
                 <li class="inline-block">Manuel Oriol</li>
               </ul>
 
-              <p>10 July 2024</p>
+              <p>10 September 2024</p>
             </div>
             <ul class="text-right">
               <li class="ml-auto">
-                <a class="base-link" href="https://arxiv.org/abs/2405.01309"
-                  >[arxiv]</a
-                >
-              </li>
-
-              <li class="ml-auto">
                 <a
                   class="base-link"
-                  href="https://dl.acm.org/doi/abs/10.1145/3663529.3663789"
+                  href="https://dl.acm.org/doi/10.1007/978-3-031-72044-4_2"
                   >[acm]</a
                 >
               </li>
@@ -207,26 +201,56 @@
 
           <div class="prose">
             <p>
-              Automatic program repair usually relies heavily on test cases for
-              both bug identification and fix validation. The issue is that
-              writing test cases is tedious, running them takes much time, and
-              validating a fix through tests does not guarantee its correctness.
-              The novel idea in the Proof2Fix methodology and tool presented
-              here is to rely instead on a program prover, without the need to
-              run tests or to run the program at all. Results show that
-              Proof2Fix automatically finds and fixes significant historical
-              bugs.
+              MCDC, for “Modified Condition/Decision Coverage”, is a test
+              coverage criterion recommended in several important industrial
+              software safety standards. The intuition behind MCDC is that it
+              should be more effective than industry’s default coverage
+              criterion, branch coverage, since it uses a finer-grain
+              decomposition of program conditions.
+            </p>
+
+            <p>
+              Manually generating MCDC-compliant test suites is, however,
+              tedious and error-prone; there is, as a result, little empirical
+              evidence of whether that intuition holds up in practice. Does MCDC
+              really provide enough of an advantage over branch coverage to
+              justify the extra work and longer test runs?
+            </p>
+
+            <p>
+              To help answer this question, the present work takes advantage of
+              verification technology that combines tests and proofs, based on
+              the AutoProof program verifier.
+            </p>
+
+            <p>
+              For each decision point in the program, the approach proceeds in
+              four steps. First, compute a set of conditions that satisfy MCDC.
+              Then, inject into the program, for each combination, an incorrect
+              instruction (a “seeded contradiction” in the terminology of
+              previous work). Next, apply the prover to verify the instrumented
+              program; the prover naturally fails, but in the process it
+              produces a set of counterexamples covering all the combinations.
+              Finally, turn this result into a directly usable test
+              suite—guaranteed by construction to satisfy the MCDC criterion.
+            </p>
+
+            <p>
+              The results, on a significant set of example programs, yield
+              insights on how MCDC coverage compares to branch coverage and
+              adaptive random testing when trying to detect faults.
             </p>
           </div>
         </main>
 
         <div class="flex md:w-[40rem] mx-auto mt-10 mb-10">
           <a
-            href="/publications/mcdc-better-tests-proofs"
+            href="/publications/bugfix-language-for-automatic-program-repair"
             class="block flex-1 base-link"
           >
             <span class="font-normal">← Previous page</span><br />
-            Is MCDC Really Better? Lessons from Combining Tests and Proofs
+            BUGFIX: towards a common language and framework for the Automatic
+            Program Repair community
           </a>
 
           <div
@@ -234,11 +258,11 @@
           ></div>
 
           <a
-            href="/publications/concept-of-class-invariant-in-oop"
+            href="/publications/execution-free-program-repair"
             class="block flex-1 base-link text-right"
           >
             <span class="font-normal">Next page →</span><br />
-            The concept of class invariant in object-oriented programming
+            Execution-Free Program Repair
           </a>
         </div>
       </div>

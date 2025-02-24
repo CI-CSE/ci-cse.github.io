@@ -1,10 +1,22 @@
 ---
-layout: null
 ---
+@import "tailwindcss";
+@source "_site/**/*.html";
+@plugin "@tailwindcss/typography";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  /* Corporate colors */
+
+  /* Main colors */
+  --color-mobility-blue: #008ce3;
+  --color-navy-blue: #00204d;
+  --color-diversity-red: #db4f3d;
+  /* Accent colors */
+  --color-confident-blue: #004381;
+  --color-shiny-yellow: #ffc622;
+  --color-healthy-green: #00a987;
+  --color-graphene-black: #0a0a0a;
+}
 
 @layer base {
   a {
@@ -13,21 +25,19 @@ layout: null
   }
 }
 
-@layer utilities {
-  .visited-revert {
-    @apply visited:text-[revert];
-  }
+@utility visited-revert {
+  @apply visited:text-[revert];
+}
+
+@utility base-link {
+  @apply visited-revert;
+  @apply no-underline;
+  @apply hover:underline;
+  @apply font-semibold;
+  @apply text-navy-blue;
 }
 
 @layer components {
-  .base-link {
-    @apply visited-revert;
-    @apply no-underline;
-    @apply hover:underline;
-    @apply font-semibold;
-    @apply text-navy-blue;
-  }
-
   .prose {
     @apply prose-headings:text-navy-blue;
 

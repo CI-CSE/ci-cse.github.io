@@ -11,13 +11,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
-  spec.require_paths = ['_plugins']
 
-  spec.add_runtime_dependency "jekyll", "~> 4.3"
-  spec.add_runtime_dependency "rouge", ">= 4.3.0"
-  spec.add_runtime_dependency "webrick", ">= 1.8.0"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
-  spec.add_runtime_dependency "json", ">= 2.7"
-  spec.add_runtime_dependency 'jekyll-tailwindcss', '~> 0.5'
-  spec.add_runtime_dependency 'jekyll-gem-resolver', '~> 1.1'
+  spec.add_dependency 'jekyll', '~> 4.4'
+  spec.add_dependency "jekyll-seo-tag", "~> 2.8"
+  spec.add_dependency 'jekyll-tailwindcss', '~> 0.6'
 end

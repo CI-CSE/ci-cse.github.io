@@ -8,3 +8,4 @@ gem 'jekyll-redirect-from', '~> 0.16.0'
 gem 'jekyll_picture_tag', '~> 2.0'
 
 gem 'tailwindcss-ruby', '~> 4'
+gem 'bigdecimal', '~> 3.1', '>= 3.1.9'

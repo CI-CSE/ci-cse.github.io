@@ -6,13 +6,13 @@
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      Improving Counterexample Quality from Failed Program Verification | Chair
-      of Software Engineering
+      Loop unrolling - formal definition and application to testing | Chair of
+      Software Engineering
     </title>
     <meta name="generator" content="Jekyll v4.4.1" />
     <meta
       property="og:title"
-      content="Improving Counterexample Quality from Failed Program Verification"
+      content="Loop unrolling - formal definition and application to testing"
     />
     <meta name="author" content="Li Huang" />
     <meta property="og:locale" content="en_US" />
@@ -26,37 +26,37 @@
     />
     <link
       rel="canonical"
-      href="/publications/improving-counterexample-failed-verification"
+      href="/publications/loop-unrolling-formal-definition-and-application-to-testing"
     />
     <meta
       property="og:url"
-      content="/publications/improving-counterexample-failed-verification"
+      content="/publications/loop-unrolling-formal-definition-and-application-to-testing"
     />
     <meta property="og:site_name" content="Chair of Software Engineering" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2022-10-31T00:00:00+00:00"
+      content="2025-02-21T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
       property="twitter:title"
-      content="Improving Counterexample Quality from Failed Program Verification"
+      content="Loop unrolling - formal definition and application to testing"
     />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Li Huang" },
-        "dateModified": "2022-10-31T00:00:00+00:00",
-        "datePublished": "2022-10-31T00:00:00+00:00",
+        "dateModified": "2025-02-21T00:00:00+00:00",
+        "datePublished": "2025-02-21T00:00:00+00:00",
         "description": "Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects.",
-        "headline": "Improving Counterexample Quality from Failed Program Verification",
+        "headline": "Loop unrolling - formal definition and application to testing",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/publications/improving-counterexample-failed-verification"
+          "@id": "/publications/loop-unrolling-formal-definition-and-application-to-testing"
         },
-        "url": "/publications/improving-counterexample-failed-verification"
+        "url": "/publications/loop-unrolling-formal-definition-and-application-to-testing"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -87,12 +87,11 @@
           </li>
 
           <li>
-            <a
-              href="/publications/loop-unrolling-formal-definition-and-application-to-testing"
-              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            <span
+              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
             >
               Loop unrolling - formal definition and application to testing
-            </a>
+            </span>
           </li>
 
           <li>
@@ -152,11 +151,12 @@
           </li>
 
           <li>
-            <span
-              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
+            <a
+              href="/publications/improving-counterexample-failed-verification"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
             >
               Improving Counterexample Quality from Failed Program Verification
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -193,8 +193,7 @@
           <div class="flex mb-2">
             <div class="grow">
               <h1 class="text-2xl text-navy-blue font-black">
-                Improving Counterexample Quality from Failed Program
-                Verification
+                Loop unrolling - formal definition and application to testing
               </h1>
 
               <ul class="inline-block">
@@ -208,23 +207,17 @@
                   >,
                 </li>
 
-                <li class="inline-block">Manuel Oriol</li>
+                <li class="inline-block">
+                  <a href="/people/reto-weber" class="base-link">Reto Weber</a>
+                </li>
               </ul>
 
-              <p>31 October 2022</p>
+              <p>21 February 2025</p>
             </div>
             <ul class="text-right">
               <li class="ml-auto">
-                <a class="base-link" href="https://arxiv.org/abs/2208.10492"
+                <a class="base-link" href="https://arxiv.org/abs/2502.15535"
                   >[arxiv]</a
-                >
-              </li>
-
-              <li class="ml-auto">
-                <a
-                  class="base-link"
-                  href="https://ieeexplore.ieee.org/abstract/document/9985046"
-                  >[ieee]</a
                 >
               </li>
             </ul>
@@ -232,34 +225,52 @@
 
           <div class="prose">
             <p>
-              In software verification, a successful automated program proof is
-              the ultimate triumph. The road to such success is, however, paved
-              with many failed proof attempts. The message produced by the
-              prover when a proof fails is often obscure, making it very hard to
-              know how to proceed further. The work reported here attempts to
-              help in such cases by providing immediately understandable
-              counterexamples. To this end, it introduces an approach called
-              Counterexample Extraction and Minimization (CEAM). When a proof
-              fails, CEAM turns the counterexample model generated by the prover
-              into a a clearly understandable version; it can in addition
-              simplify the counterexamples further by minimizing the integer
-              values they contain. We have implemented the CEAM approach as an
-              extension to the AutoProof verifier and demonstrate its
-              application to a collection of examples.
+              Testing processes usually aim at high coverage, but loops severely
+              limit coverage ambitions since the number of iterations is
+              generally not predictable. Most testing teams address this issue
+              by adopting the extreme solution of limiting themselves to branch
+              coverage, which only considers loop executions that iterate the
+              body either once or not at all. This approach misses any bug that
+              only arises after two or more iterations. To achieve more
+              meaningful coverage, testing strategies may unroll loops, in the
+              sense of using executions that iterate loops up to n times for
+              some n greater than one, chosen pragmatically in consideration of
+              the available computational power. While loop unrolling is a
+              standard part of compiler optimization techniques, its use in
+              testing is far less common. Part of the reason is that the
+              concept, while seemingly intuitive, lacks a generally accepted and
+              precise specification. The present article provides a formal
+              definition and a set of formal properties of unrolling. All the
+              properties have mechanically been proved correct (through the
+              Isabelle proof assistant). Using this definition as the conceptual
+              basis, we have applied an unrolling strategy to an existing
+              automated testing framework and report the results: how many more
+              bugs get detected once we unroll loops more than once? These
+              results provide a first assessment of whether unrolling should
+              become a standard part of test generation and test coverage
+              measurement.
             </p>
           </div>
         </main>
 
         <div class="flex md:w-[40rem] mx-auto mt-10 mb-10">
-          <a
-            href="/publications/failed-proof-yield-useful-test"
-            class="block flex-1 base-link"
-          >
+          <a href="/publications/PRISM" class="block flex-1 base-link">
             <span class="font-normal">← Previous page</span><br />
-            A failed proof can yield a useful test
+            PRISM - Programming Really Is Simple Mathematics
           </a>
 
-          <div></div>
+          <div
+            class="hidden md:block w-[1px] self-center h-6 bg-navy-blue"
+          ></div>
+
+          <a
+            href="/publications/seeding-contradiction-full-coverage"
+            class="block flex-1 base-link text-right"
+          >
+            <span class="font-normal">Next page →</span><br />
+            Seeding Contradiction: a Fast Method for Generating Full-Coverage
+            Test Suites
+          </a>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ Website of CIT-SE and the common theme called historically called `cicse`
 
 There are some system dependencies.
 
-For `jekyll_picture_tag` install `libvips`
+For `jekyll_picture_tag` install `libvips` and `imagemagick`
 (more details https://rbuchberger.github.io/jekyll_picture_tag/users/installation.html).
 
 ## Development

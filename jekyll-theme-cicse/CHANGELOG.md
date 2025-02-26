@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ability to specify post authors with optional link to site's author page [#5]
 - Ability to flip the order of menu and previous/next links in collections using
   `reverse_navigation: true` [#5]
+- Add `bigdecimal` dependency. Jekyll uses `bigdecimal` but it is
+  removed from Ruby 3.4 [#7]
 
 ### Changed
 
@@ -39,4 +41,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [#5]: https://github.com/CI-CSE/ci-cse.github.io/pull/5
+[#5]: https://github.com/CI-CSE/ci-cse.github.io/pull/7
 [unreleased]: https://github.com/CI-CSE/ci-cse.github.io/compare/80a822246d75e19afea97108d62a0b8aee31bbdf...HEAD

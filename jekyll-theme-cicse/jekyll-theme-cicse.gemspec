@@ -15,4 +15,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jekyll', '~> 4.4'
   spec.add_dependency "jekyll-seo-tag", "~> 2.8"
   spec.add_dependency 'jekyll-tailwindcss', '~> 0.6'
+  spec.add_dependency 'bigdecimal', '>= 3.1.9' # dependency of jekyll removed from Ruby 3.4
 end

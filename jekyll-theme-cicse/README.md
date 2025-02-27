@@ -30,15 +30,46 @@ theme: jekyll-theme-cicse
 ```
 
 Check the [theme config file](./jekyll-theme-cicse/_config.yml) for the configs
-used by the theme itself.
+used by the theme itself. Most important options are listed here.
+
+### Parent website link in header
+To disable the link to the parent website set `parent: false`:
+
+``` yaml
+cicse:
+  parent: false
+```
+
+To configure the parent website, use the following keys:
+
+``` yaml
+cicse:
+  parent:
+    name: Text of the link
+    link: "https://url-to-the-parent-website"
+```
+
+### Navigation links in header
+There is always a "Home" link which points to the root of the website.
+
+Additional links can be specified in the `nav_links` array:
+
+``` yaml
+cicse:
+  nav_links:
+    - link: 'people'
+      title: People
+    - link: 'publications'
+      title: Publications
+```
 
 ## Styling and Tailwind
 This theme uses
 [`jekyll-tailwindcss`](https://github.com/vormwald/jekyll-tailwindcss) which
 allows you to use [Tailwind CSS](https://tailwindcss.com/) without `node`.
 
-The `tailwind.config.js` is included in the theme,
-so you do not need to create it yourself.
+Tailwind configuration is done in the css file, so Tailwind v4 is required.
+The js config `tailwind.config.js` is not needed.
 
 Tailwind is configured to collect CSS classes all `*.html` files
 located under `_site`. This has the benefit that only used classes

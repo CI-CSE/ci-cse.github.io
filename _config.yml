@@ -13,7 +13,7 @@ plugins:
 
 theme: jekyll-theme-cicse
 cicse:
-  bar_link: false
+  parent: false
   nav_links:
     - link: 'people'
       title: People

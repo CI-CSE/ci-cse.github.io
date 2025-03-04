@@ -19,6 +19,8 @@ cicse:
       title: People
     - link: 'publications'
       title: Publications
+    - link: 'projects'
+      title: Projects
 
 collections:
   people:

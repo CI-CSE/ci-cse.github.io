@@ -37,17 +37,14 @@
   @apply text-navy-blue;
 }
 
-@layer components {
+@layer utilities {
   .prose {
     @apply prose-headings:text-navy-blue;
-
-    a {
-      @apply base-link;
-    }
+    @apply prose-a:base-link;
   }
 }
 
-@layer components {
+@layer utilities {
     /*
     Rouge Github theme
     https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/themes/github.rb

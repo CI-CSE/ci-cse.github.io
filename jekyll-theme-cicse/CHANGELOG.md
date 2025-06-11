@@ -38,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Do not use ordinal for post date [#5]
 - Show previous/next links on different lines for small screens [#8]
 - Add parent website link in header [#8]
+- Remove backtics and add background for inline code in prose [#11]
+- Make parent website line in header after site title [#11]
 
 ### Removed
 
@@ -45,4 +47,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#5]: https://github.com/CI-CSE/ci-cse.github.io/pull/5
 [#7]: https://github.com/CI-CSE/ci-cse.github.io/pull/7
 [#8]: https://github.com/CI-CSE/ci-cse.github.io/pull/8
+[#11]: https://github.com/CI-CSE/ci-cse.github.io/pull/11
 [unreleased]: https://github.com/CI-CSE/ci-cse.github.io/compare/80a822246d75e19afea97108d62a0b8aee31bbdf...HEAD

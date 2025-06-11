@@ -37,10 +37,23 @@
   @apply text-navy-blue;
 }
 
+@custom-variant prose-inline-code {
+  &.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *)) {
+    @slot;
+  }
+}
+
 @layer utilities {
   .prose {
     @apply prose-headings:text-navy-blue;
     @apply prose-a:base-link;
+    @apply prose-inline-code:before:content-none;
+    @apply prose-inline-code:after:content-none;
+    @apply prose-inline-code:bg-[#f6f8fa];
+    @apply prose-inline-code:py-0.5;
+    @apply prose-inline-code:px-1;
+    @apply prose-inline-code:rounded-xs;
+    @apply prose-inline-code:box-decoration-clone;
   }
 }
 

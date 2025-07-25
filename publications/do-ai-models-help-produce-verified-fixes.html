@@ -6,13 +6,13 @@
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      Improving Counterexample Quality from Failed Program Verification | Chair
-      of Software Engineering
+      Do AI models help produce verified bug fixes? | Chair of Software
+      Engineering
     </title>
     <meta name="generator" content="Jekyll v4.4.1" />
     <meta
       property="og:title"
-      content="Improving Counterexample Quality from Failed Program Verification"
+      content="Do AI models help produce verified bug fixes?"
     />
     <meta name="author" content="Li Huang" />
     <meta property="og:locale" content="en_US" />
@@ -26,37 +26,37 @@
     />
     <link
       rel="canonical"
-      href="/publications/improving-counterexample-failed-verification"
+      href="/publications/do-ai-models-help-produce-verified-fixes"
     />
     <meta
       property="og:url"
-      content="/publications/improving-counterexample-failed-verification"
+      content="/publications/do-ai-models-help-produce-verified-fixes"
     />
     <meta property="og:site_name" content="Chair of Software Engineering" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2022-10-31T00:00:00+00:00"
+      content="2025-07-21T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
       property="twitter:title"
-      content="Improving Counterexample Quality from Failed Program Verification"
+      content="Do AI models help produce verified bug fixes?"
     />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Li Huang" },
-        "dateModified": "2022-10-31T00:00:00+00:00",
-        "datePublished": "2022-10-31T00:00:00+00:00",
+        "dateModified": "2025-07-21T00:00:00+00:00",
+        "datePublished": "2025-07-21T00:00:00+00:00",
         "description": "Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects.",
-        "headline": "Improving Counterexample Quality from Failed Program Verification",
+        "headline": "Do AI models help produce verified bug fixes?",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/publications/improving-counterexample-failed-verification"
+          "@id": "/publications/do-ai-models-help-produce-verified-fixes"
         },
-        "url": "/publications/improving-counterexample-failed-verification"
+        "url": "/publications/do-ai-models-help-produce-verified-fixes"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -78,12 +78,11 @@
           </li>
 
           <li>
-            <a
-              href="/publications/do-ai-models-help-produce-verified-fixes"
-              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
+            <span
+              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
             >
               Do AI models help produce verified bug fixes?
-            </a>
+            </span>
           </li>
 
           <li>
@@ -161,11 +160,12 @@
           </li>
 
           <li>
-            <span
-              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
+            <a
+              href="/publications/improving-counterexample-failed-verification"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-4"
             >
               Improving Counterexample Quality from Failed Program Verification
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -208,8 +208,7 @@
           <div class="flex mb-2">
             <div class="grow">
               <h1 class="text-2xl text-navy-blue font-black">
-                Improving Counterexample Quality from Failed Program
-                Verification
+                Do AI models help produce verified bug fixes?
               </h1>
 
               <ul class="inline-block">
@@ -218,28 +217,40 @@
                 </li>
 
                 <li class="inline-block">
-                  <a href="/people/bertrand-meyer" class="base-link"
-                    >Bertrand Meyer</a
+                  <a href="/people/ilgiz-mustafin" class="base-link"
+                    >Ilgiz Mustafin</a
                   >,
                 </li>
 
-                <li class="inline-block">Manuel Oriol</li>
+                <li class="inline-block">
+                  <a href="/people/marco-piccioni" class="base-link"
+                    >Marco Piccioni</a
+                  >,
+                </li>
+
+                <li class="inline-block">
+                  <a href="/people/alessandro-schena" class="base-link"
+                    >Alessandro Schena</a
+                  >,
+                </li>
+
+                <li class="inline-block">
+                  <a href="/people/reto-weber" class="base-link">Reto Weber</a>,
+                </li>
+
+                <li class="inline-block">
+                  <a href="/people/bertrand-meyer" class="base-link"
+                    >Bertrand Meyer</a
+                  >
+                </li>
               </ul>
 
-              <p>31 October 2022</p>
+              <p>21 July 2025</p>
             </div>
             <ul class="text-right">
               <li class="ml-auto">
-                <a class="base-link" href="https://arxiv.org/abs/2208.10492"
+                <a class="base-link" href="https://arxiv.org/abs/2507.15822"
                   >[arxiv]</a
-                >
-              </li>
-
-              <li class="ml-auto">
-                <a
-                  class="base-link"
-                  href="https://ieeexplore.ieee.org/abstract/document/9985046"
-                  >[ieee]</a
                 >
               </li>
             </ul>
@@ -247,34 +258,55 @@
 
           <div class="prose">
             <p>
-              In software verification, a successful automated program proof is
-              the ultimate triumph. The road to such success is, however, paved
-              with many failed proof attempts. The message produced by the
-              prover when a proof fails is often obscure, making it very hard to
-              know how to proceed further. The work reported here attempts to
-              help in such cases by providing immediately understandable
-              counterexamples. To this end, it introduces an approach called
-              Counterexample Extraction and Minimization (CEAM). When a proof
-              fails, CEAM turns the counterexample model generated by the prover
-              into a a clearly understandable version; it can in addition
-              simplify the counterexamples further by minimizing the integer
-              values they contain. We have implemented the CEAM approach as an
-              extension to the AutoProof verifier and demonstrate its
-              application to a collection of examples.
+              Among areas of software engineering where AI techniques –
+              particularly, Large Language Models – seem poised to yield
+              dramatic improvements, an attractive candidate is Automatic
+              Program Repair (APR), the production of satisfactory corrections
+              to software bugs. Does this expectation materialize in practice?
+              How do we find out, making sure that proposed corrections actually
+              work? If programmers have access to LLMs, how do they actually use
+              them to complement their own skills? To answer these questions, we
+              took advantage of the availability of a program-proving
+              environment, which formally determines the correctness of proposed
+              fixes, to conduct a study of program debugging with two randomly
+              assigned groups of programmers, one with access to LLMs and the
+              other without, both validating their answers through the proof
+              tools. The methodology relied on a division into general research
+              questions (Goals in the Goal-Query-Metric approach), specific
+              elements admitting specific answers (Queries), and measurements
+              supporting these answers (Metrics). While applied so far to a
+              limited sample size, the results are a first step towards
+              delineating a proper role for AI and LLMs in providing
+              guaranteed-correct fixes to program bugs. These results caused
+              surprise as compared to what one might expect from the use of AI
+              for debugging and APR. The contributions also include: a detailed
+              methodology for experiments in the use of LLMs for debugging,
+              which other projects can reuse; a fine-grain analysis of
+              programmer behavior, made possible by the use of full-session
+              recording; a definition of patterns of use of LLMs, with 7
+              distinct categories; and validated advice for getting the best of
+              LLMs for debugging and Automatic Program Repair.
             </p>
           </div>
         </main>
 
         <div class="md:flex md:w-[40rem] mx-auto mt-10 mb-10">
-          <a
-            href="/publications/failed-proof-yield-useful-test"
-            class="block flex-1 base-link"
-          >
+          <a href="/publications/index" class="block flex-1 base-link">
             <span class="font-normal">← Previous page</span><br />
-            A failed proof can yield a useful test
+            Publications
           </a>
 
-          <div></div>
+          <div
+            class="hidden md:block w-[1px] self-center h-6 bg-navy-blue"
+          ></div>
+
+          <a
+            href="/publications/PRISM"
+            class="block flex-1 base-link text-right"
+          >
+            <span class="font-normal">Next page →</span><br />
+            PRISM - Programming Really Is Simple Mathematics
+          </a>
         </div>
       </div>
     </div>

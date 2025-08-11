@@ -2,6 +2,7 @@
 layout: publication
 title: The concept of class invariant in object-oriented programming
 date: 2024-03-20
+venue: "Formal Aspects of Computing, Volume 36, Issue 1"
 authors:
   - name: Bertrand Meyer
     author: bertrand-meyer

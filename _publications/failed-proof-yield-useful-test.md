@@ -2,6 +2,7 @@
 layout: publication
 title: A failed proof can yield a useful test
 date: 2023-08-31
+venue: "Software Testing, Verification and Reliability"
 authors:
   - name: Li Huang
     author: li-huang

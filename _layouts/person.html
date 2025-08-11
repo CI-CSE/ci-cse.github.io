@@ -47,9 +47,9 @@ layout: page
         {% for author in pub.authors %}
           {{ author.name }}{% if forloop.last %}: {% else %}, {% endif %}
         {% endfor %}
-        <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        "<a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>"
+        <span class="italic">{{ pub.venue }}</span>
         {{ pub.date | date: '%Y' }}
-
       </li>
     {% endfor %}
   </ul>

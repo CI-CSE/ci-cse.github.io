@@ -2,6 +2,7 @@
 layout: publication
 title: "BUGFIX: towards a common language and framework for the Automatic Program Repair community"
 date: 2024-09-11
+venue: "Proceedings of the 5th ACM/IEEE International Workshop on Automated Program Repair"
 authors:
   - name: Bertrand Meyer
     author: bertrand-meyer

@@ -2,6 +2,7 @@
 layout: publication
 title: Is MCDC Really Better? Lessons from Combining Tests and Proofs
 date: 2024-09-10
+venue: "Tests and Proofs: 18th International Conference, TAP 2024"
 authors:
   - name: Li Huang
     author: li-huang

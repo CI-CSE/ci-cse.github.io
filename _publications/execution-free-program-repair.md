@@ -2,6 +2,7 @@
 layout: publication
 title: Execution-Free Program Repair
 date: 2024-07-10
+venue: "Companion Proceedings of the 32nd ACM International Conference on the Foundations of Software Engineering"
 authors:
   - name: Li Huang
     author: li-huang

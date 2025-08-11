@@ -33,7 +33,7 @@ in the experiment!
 
 [paper]: {% link _publications/do-ai-models-help-produce-verified-fixes.md %}
 [lh]: {% link _people/li-huang.md %}
-[im]: {% link _people/ilgiz-mustafin.md %}
+[im]: {% link _people/ilgiz-mustafin/index.md %}
 [mp]: {% link _people/marco-piccioni.md %}
 [as]: {% link _people/alessandro-schena.md %}
 [rw]: {% link _people/reto-weber.md %}

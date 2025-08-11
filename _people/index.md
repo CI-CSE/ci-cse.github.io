@@ -12,9 +12,8 @@ This page lists all members of the Chair of Software Engineering at
 Constructor Institute of Technology.
 
 ## Current members
-{% for person in site.people %}
-{% unless person.is_index %}
+{% assign people = site.people | where: "layout", "person" %}
+{% for person in people %}
 * [{{ person.title }}]({{ person.url | relative_url }})
-{% endunless %}
 {% endfor %}
 

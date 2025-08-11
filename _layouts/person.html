@@ -1,0 +1,69 @@
+---
+layout: page
+---
+<h1>{{ page.title }}</h1>
+
+<div class="prose mx-auto">
+  {{ content }}
+</div>
+
+
+{% comment %}
+  Contacts
+{% endcomment %}
+{% if page.contacts %}
+  <h2>Contacts</h2>
+  <table>
+    {% for c in page.contacts %}
+      <tr>
+        <td>{{ c.name }}</td>
+        <td><a href="{{ c.href }}">{{ c.text }}</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endif %}
+
+{% comment %}
+  Publications
+{% endcomment %}
+{% assign publications = "" | split: "," %}
+{% for pub in site.publications %}
+  {% assign found = false %}
+  {% for author in pub.authors %}
+    {% if author.author == page.author_id %}
+      {% assign found = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if found %}
+    {% assign publications = publications | push: pub %}
+  {% endif %}
+{% endfor %}
+{% unless publications == empty %}
+  <h2>Publications by {{ page.title }}</h2>
+  <ul>
+    {% for pub in publications reversed %}
+      <li>
+        {% for author in pub.authors %}
+          {{ author.name }}{% if forloop.last %}: {% else %}, {% endif %}
+        {% endfor %}
+        <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        {{ pub.date | date: '%Y' }}
+
+      </li>
+    {% endfor %}
+  </ul>
+{% endunless %}
+
+{% comment %}
+  Posts
+{% endcomment %}
+{% assign posts = site.posts | where: "author", page.author_id %}
+{% unless posts == empty %}
+  <h2>Posts by {{ page.title }}</h2>
+  <ul>
+    {% for p in posts %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>, {{ p.date | date: "%b %Y" }}</li>
+    {% endfor %}
+  </ul>
+{% endunless %}

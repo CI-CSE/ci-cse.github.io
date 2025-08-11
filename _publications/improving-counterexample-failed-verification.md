@@ -2,6 +2,7 @@
 layout: publication
 title: Improving Counterexample Quality from Failed Program Verification
 date: 2022-10-31
+venue: "2022 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)"
 authors:
   - name: Li Huang
     author: li-huang

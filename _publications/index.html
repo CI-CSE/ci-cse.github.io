@@ -23,11 +23,13 @@ description: Scientific papers of the Chair of Software Engineering at CIT
         <div class="flex">
           <div class="grow">
             <a
-              class="base-link text-xl"
+              class="base-link"
               href="{{ publication.url | relative_url }}"
             >
               {{ publication.title }}
             </a>
+            <br>
+            <span class="italic">{{ publication.venue }}</span>
             <ul>
               {% for author in publication.authors %}
                 <li class="inline-block">

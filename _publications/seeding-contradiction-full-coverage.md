@@ -2,6 +2,7 @@
 layout: publication
 title: "Seeding Contradiction: a Fast Method for Generating Full-Coverage Test Suites"
 date: 2024-12-24
+venue: SN Computer Science
 authors:
   - name: Li Huang
     author: li-huang

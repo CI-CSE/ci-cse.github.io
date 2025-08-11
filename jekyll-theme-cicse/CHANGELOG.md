@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `reverse_navigation: true` [#5]
 - Add `bigdecimal` dependency. Jekyll uses `bigdecimal` but it is
   removed from Ruby 3.4 [#7]
+- Collection navigation supports subfolders.
+
 
 ### Changed
 

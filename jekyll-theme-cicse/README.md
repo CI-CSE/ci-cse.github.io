@@ -122,6 +122,11 @@ need to iterate the list in the reverse order:
 {% endfor}
 ```
 
+#### Subfolders in collections
+Collection navigation shows pages nested in subfolders using indentation.
+However, it is your responsibility to ensure that the order of pages makes
+sense.
+
 ### Post authors
 You can specify the author of a post by setting the `author` key in post's front matter.
 

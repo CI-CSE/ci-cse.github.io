@@ -12,38 +12,81 @@
     <div class="flex-1 flex flex-row-reverse">
       {% assign col = site.collections | where: "label", page.collection | first %}
       {% if page.collection and page.collection != 'posts' and col.disable_menu != true %}
+        {% assign stack = "" | split: "," %}
         <nav class="hidden xl:block w-[16rem]">
           <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
-          <ul class="bg-gradient-to-bl from-blue-50 pb-6">
+          <div class="bg-gradient-to-bl from-blue-50">
             {% assign pages = site[page.collection] %}
             {% if col.reverse_navigation %}
               {% assign pages = pages | reverse %}
             {% endif %}
             {% for p in pages %}
+              {% assign path = p.path | split: "/" %}
+              {% unless p.is_index %}
+                {% assign plast = path | last %}
+                {% if plast == "index.md" %}
+                  {% assign path = path | pop  %}
+                {% endif %}
+              {% endunless %}
+              {% assign path = path | pop %}
+
+              {% assign maxlen = stack.size | at_least: path.size %}
+              {% assign s = stack %}
+              {% assign ar = path %}
+              {% for i in (1..maxlen) %}
+                {% if s == empty %}
+                  {% comment %}
+                    stack empty, path not empty: start a list for all in path
+                  {% endcomment %}
+                  {% for pp in ar %}
+                    {% assign stack = stack | push: pp %}
+                    <ul class="{% if stack.size > 1 %} pl-5 {% endif %}">
+                  {% endfor %}
+                  {% break %}
+                {% endif %}
+                {% if ar == empty %}
+                  {% for ss in s %}
+                    {% assign stack = stack | pop %}
+                    </ul>
+                  {% endfor %}
+                  {% break %}
+                {% endif %}
+                {% assign sfirst = s | first %}
+                {% assign afirst = ar | first %}
+                {% if sfirst == afirst %}
+                  {% assign s = s | shift %}
+                  {% assign ar = ar | shift %}
+                {% else %}
+                  </ul>
+                  {% assign s = s | shift %}
+                {% endif %}
+              {% endfor %}
               <li>
+                {% assign title = p.toc_title | default: p.title %}
                 {% unless p == page %}
                   <a
                     href="{{ p.url | relative_url }}"
                     class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert
-                          {% if p.is_index %} pl-2 font-bold
-                          {% else %} pl-4
-                          {% endif %}
+                          pl-2
+                          {% if p.is_index %} font-bold {% endif %}
                           "
                   >
-                    {{ p.title }}
+                    {{ title }}
                   </a>
                 {% else %}
                   <span class="min-h-8 flex items-center bg-blue-100 align-middle
-                               {% if p.is_index %} pl-2 font-bold
-                               {% else %} pl-4
-                               {% endif %}
+                               pl-2
+                               {% if p.is_index %} font-bold {% endif %}
                                ">
-                    {{ p.title }}
+                    {{ title }}
                   </span>
                 {% endunless %}
               </li>
             {% endfor %}
-          </ul>
+          {% for ss in stack %}
+            </ul>
+          {% endfor %}
+          </div>
         </nav>
       {% endif %}
     </div>

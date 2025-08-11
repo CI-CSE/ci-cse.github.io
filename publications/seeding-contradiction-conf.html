@@ -6,13 +6,13 @@
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      Seeding Contradiction: a Fast Method for Generating Full-Coverage Test
+      Seeding Contradiction: A Fast Method for Generating Full-Coverage Test
       Suites | Chair of Software Engineering
     </title>
     <meta name="generator" content="Jekyll v4.4.1" />
     <meta
       property="og:title"
-      content="Seeding Contradiction: a Fast Method for Generating Full-Coverage Test Suites"
+      content="Seeding Contradiction: A Fast Method for Generating Full-Coverage Test Suites"
     />
     <meta name="author" content="Li Huang" />
     <meta property="og:locale" content="en_US" />
@@ -24,39 +24,36 @@
       property="og:description"
       content="Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects."
     />
-    <link
-      rel="canonical"
-      href="/publications/seeding-contradiction-full-coverage"
-    />
+    <link rel="canonical" href="/publications/seeding-contradiction-conf" />
     <meta
       property="og:url"
-      content="/publications/seeding-contradiction-full-coverage"
+      content="/publications/seeding-contradiction-conf"
     />
     <meta property="og:site_name" content="Chair of Software Engineering" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-12-24T00:00:00+00:00"
+      content="2023-09-19T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
       property="twitter:title"
-      content="Seeding Contradiction: a Fast Method for Generating Full-Coverage Test Suites"
+      content="Seeding Contradiction: A Fast Method for Generating Full-Coverage Test Suites"
     />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Li Huang" },
-        "dateModified": "2024-12-24T00:00:00+00:00",
-        "datePublished": "2024-12-24T00:00:00+00:00",
+        "dateModified": "2023-09-19T00:00:00+00:00",
+        "datePublished": "2023-09-19T00:00:00+00:00",
         "description": "Website of the Chair of Software Engineering at Constructor Institute of Technology. Latest news about our research and projects.",
-        "headline": "Seeding Contradiction: a Fast Method for Generating Full-Coverage Test Suites",
+        "headline": "Seeding Contradiction: A Fast Method for Generating Full-Coverage Test Suites",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/publications/seeding-contradiction-full-coverage"
+          "@id": "/publications/seeding-contradiction-conf"
         },
-        "url": "/publications/seeding-contradiction-full-coverage"
+        "url": "/publications/seeding-contradiction-conf"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -106,12 +103,13 @@
             </li>
 
             <li>
-              <span
-                class="min-h-8 flex items-center bg-blue-100 align-middle pl-2"
+              <a
+                href="/publications/seeding-contradiction-full-coverage"
+                class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-2"
               >
                 Seeding Contradiction: a Fast Method for Generating
                 Full-Coverage Test Suites
-              </span>
+              </a>
             </li>
 
             <li>
@@ -162,13 +160,12 @@
             </li>
 
             <li>
-              <a
-                href="/publications/seeding-contradiction-conf"
-                class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-2"
+              <span
+                class="min-h-8 flex items-center bg-blue-100 align-middle pl-2"
               >
                 Seeding Contradiction: A Fast Method for Generating
                 Full-Coverage Test Suites
-              </a>
+              </span>
             </li>
 
             <li>
@@ -231,7 +228,7 @@
           <div class="flex mb-2">
             <div class="grow">
               <h1 class="text-2xl text-navy-blue font-black">
-                Seeding Contradiction: a Fast Method for Generating
+                Seeding Contradiction: A Fast Method for Generating
                 Full-Coverage Test Suites
               </h1>
 
@@ -250,21 +247,17 @@
               </ul>
 
               <br />
-              <span class="italic">SN Computer Science</span>
+              <span class="italic"
+                >Testing Software and Systems. ICTSS 2023</span
+              >
 
-              <p>24 December 2024</p>
+              <p>19 September 2023</p>
             </div>
             <ul class="text-right">
               <li class="ml-auto">
-                <a class="base-link" href="https://arxiv.org/abs/2309.04232"
-                  >[arxiv]</a
-                >
-              </li>
-
-              <li class="ml-auto">
                 <a
                   class="base-link"
-                  href="https://link.springer.com/article/10.1007/s42979-024-03482-0"
+                  href="https://link.springer.com/chapter/10.1007/978-3-031-43240-8_4"
                   >[springer]</a
                 >
               </li>
@@ -274,29 +267,26 @@
           <div class="prose">
             <p>
               The regression test suite, a key resource for managing program
-              evolution, needs to achieve 100% branch coverage, or very close,
-              to be useful. Devising a test suite manually is unacceptably
-              tedious. Although many automated methods exist to improve the
-              efficiency of test generation, they are mostly dynamic. The method
+              evolution, needs to achieve 100% coverage, or very close, to be
+              useful. Devising a test suite manually is unacceptably tedious,
+              but existing automated methods are often inefficient. The method
               described in this article, “Seeding Contradiction”, inserts
               incorrect instructions into every basic block of the program,
               enabling an SMT-based Hoare-style prover to generate a
               counterexample for every branch of the program and, from the
               collection of all such counterexamples, a test suite. The method
-              is static, works fast, and achieves full coverage, even going
-              beyond the usual concept of branch coverage by “unrolling” loops a
-              parameterizable number of times.
+              is static, works fast, and achieves excellent coverage.
             </p>
           </div>
         </main>
 
         <div class="md:flex md:w-[40rem] mx-auto mt-10 mb-10">
           <a
-            href="/publications/loop-unrolling-formal-definition-and-application-to-testing"
+            href="/publications/concept-of-class-invariant-in-oop"
             class="block flex-1 base-link"
           >
             <span class="font-normal">← Previous page</span><br />
-            Loop unrolling - formal definition and application to testing
+            The concept of class invariant in object-oriented programming
           </a>
 
           <div
@@ -304,12 +294,11 @@
           ></div>
 
           <a
-            href="/publications/bugfix-language-for-automatic-program-repair"
+            href="/publications/failed-proof-yield-useful-test"
             class="block flex-1 base-link text-right"
           >
             <span class="font-normal">Next page →</span><br />
-            BUGFIX: towards a common language and framework for the Automatic
-            Program Repair community
+            A failed proof can yield a useful test
           </a>
         </div>
       </div>

@@ -11,6 +11,9 @@ plugins:
   - jekyll-redirect-from
   - jekyll_picture_tag
 
+# seo
+google_site_verification: "jOfHPJ_fFjabzv3HsR0WT3zNUZfLRpGtEAqKql3BEP8"
+
 theme: jekyll-theme-cicse
 cicse:
   parent: false

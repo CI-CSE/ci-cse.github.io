@@ -6,15 +6,31 @@ layout: page
 # Research interests of Ilgiz Mustafin
 
 My research interests lie at the intersection of academic and industrial
-software engineering, with a focus on *software verification*.
+software engineering, with a focus on *practical software engineering*.
 
+Recently, I have joined a research project called *Bugfix*. The research
+analyzes bug and fix patterns in several languages at once.
+Existing program repair datasets often focus just on a single language.
+The aim of our research is to look at the big picture
+and try to find commonalities across different languages. This is made
+possible by translating concrete program ASTs into a more general
+AST which preserves the main semantics of programs while abstracting away
+language details, which are not important for a specific bug.
+
+My planned follow-up research is to enhance automatic program repair
+tools using machine learning. The common AST representation can help
+pre-trained models (such as LLMs) to work better with languages underrepresented
+in the training sets.
+
+Another research area that I work on is *software verification*.
 Despite the existence of verified software systems in production and
 of verifiers for many programming languages, producing verified
 software is not the norm in the industry. I want to help change this situation
 by making verification accessible and convenient for everyone, not only
 highly trained scientists.
 
-The research I am working on right now is connected with the approach called
+The research I am working on right now in software verification
+is connected with the approach called
 *invariant slicing*, which simplifies the verification of multi-object
 class invariants in object-oriented languages.
 I am working on formally proving soundness
@@ -31,12 +47,6 @@ protected features. The public part of the invariant
 (invariant clauses mentioning public class members) is out of scope
 of the function.
 
-A possible follow-up research is verification of concurrent programs using
-object-oriented programming. While several approaches exist for
-verifying concurrent programs, few take advantage of class invariants.
-I am interested in researching how much invariant slicing can help
-in writing and verifying concurrent OOP programs.
-
 Besides semantic challenges, effective software verification must also
 handle practical needs of industry applications. I am interested in finding
 pragmatic solutions.
@@ -44,7 +54,7 @@ For example, many applications interact
 with SQL databases. The DB schema (including constraints and triggers)
 might contain information which
 is not representable by common DB adapters. Conversely,
-applications might need to ensure a data invariant in the DB,
+applications might need to ensure a data or security invariant in the DB,
 not representable by the schema alone. A reusable verified App-DB adapter
 framework might be a good advertisement for verification technology, while
 also highlighting the actual problems that many developers face in their
@@ -60,6 +70,4 @@ coding assistant which can provide valuable context for the model.
 
 I look forward to collaborating on these and any other
 challenges of software correctness and help bring the advances
-in software verification closer to the industry.
-
-
+in software engineering research closer to the industry.

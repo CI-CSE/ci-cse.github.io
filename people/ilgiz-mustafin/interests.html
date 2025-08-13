@@ -22,7 +22,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2025-08-12T13:08:07+00:00"
+      content="2025-08-13T16:29:43+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
@@ -37,8 +37,8 @@
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "dateModified": "2025-08-12T13:08:07+00:00",
-        "datePublished": "2025-08-12T13:08:07+00:00",
+        "dateModified": "2025-08-13T16:29:43+00:00",
+        "datePublished": "2025-08-13T16:29:43+00:00",
         "description": "Research interests of Ilgiz Mustafin",
         "headline": "Research interests of Ilgiz Mustafin",
         "mainEntityOfPage": {
@@ -176,40 +176,52 @@
           <p>
             My research interests lie at the intersection of academic and
             industrial software engineering, with a focus on
-            <em>software verification</em>.
+            <em>practical software engineering</em>.
           </p>
 
           <p>
-            Despite the existence of verified software systems in production and
-            of verifiers for many programming languages, producing verified
-            software is not the norm in the industry. I want to help change this
-            situation by making verification accessible and convenient for
-            everyone, not only highly trained scientists.
+            Recently, I have joined a research project called <em>Bugfix</em>.
+            The research analyzes bug and fix patterns in several languages at
+            once. Existing program repair datasets often focus just on a single
+            language. The aim of our research is to look at the big picture and
+            try to find commonalities across different languages. This is made
+            possible by translating concrete program ASTs into a more general
+            AST which preserves the main semantics of programs while abstracting
+            away language details, which are not important for a specific bug.
           </p>
 
           <p>
-            The research I am working on right now is connected with the
-            approach called <em>invariant slicing</em>, which simplifies the
-            verification of multi-object class invariants in object-oriented
-            languages. I am working on formally proving soundness of the
-            approach and integrating the approach into AutoProof, a program
-            verifier for Eiffel. The approach removes the problem faced by
-            traditional uses of invariants, which require extensive annotations.
-            Instead of annotations, it relies on the export status of the fields
-            and procedures used in individual invariant clauses. For example, if
-            the approach is applied in Java, a package-private function can rely
-            on and must ensure only the invariant clauses, which use
-            package-private, private or protected features. The public part of
-            the invariant (invariant clauses mentioning public class members) is
-            out of scope of the function.
+            My planned follow-up research is to enhance automatic program repair
+            tools using machine learning. The common AST representation can help
+            pre-trained models (such as LLMs) to work better with languages
+            underrepresented in the training sets.
           </p>
 
           <p>
-            A possible follow-up research is verification of concurrent programs
-            using object-oriented programming. While several approaches exist
-            for verifying concurrent programs, few take advantage of class
-            invariants. I am interested in researching how much invariant
-            slicing can help in writing and verifying concurrent OOP programs.
+            Another research area that I work on is
+            <em>software verification</em>. Despite the existence of verified
+            software systems in production and of verifiers for many programming
+            languages, producing verified software is not the norm in the
+            industry. I want to help change this situation by making
+            verification accessible and convenient for everyone, not only highly
+            trained scientists.
+          </p>
+
+          <p>
+            The research I am working on right now in software verification is
+            connected with the approach called <em>invariant slicing</em>, which
+            simplifies the verification of multi-object class invariants in
+            object-oriented languages. I am working on formally proving
+            soundness of the approach and integrating the approach into
+            AutoProof, a program verifier for Eiffel. The approach removes the
+            problem faced by traditional uses of invariants, which require
+            extensive annotations. Instead of annotations, it relies on the
+            export status of the fields and procedures used in individual
+            invariant clauses. For example, if the approach is applied in Java,
+            a package-private function can rely on and must ensure only the
+            invariant clauses, which use package-private, private or protected
+            features. The public part of the invariant (invariant clauses
+            mentioning public class members) is out of scope of the function.
           </p>
 
           <p>
@@ -219,11 +231,11 @@
             applications interact with SQL databases. The DB schema (including
             constraints and triggers) might contain information which is not
             representable by common DB adapters. Conversely, applications might
-            need to ensure a data invariant in the DB, not representable by the
-            schema alone. A reusable verified App-DB adapter framework might be
-            a good advertisement for verification technology, while also
-            highlighting the actual problems that many developers face in their
-            daily work.
+            need to ensure a data or security invariant in the DB, not
+            representable by the schema alone. A reusable verified App-DB
+            adapter framework might be a good advertisement for verification
+            technology, while also highlighting the actual problems that many
+            developers face in their daily work.
           </p>
 
           <p>
@@ -239,7 +251,7 @@
           <p>
             I look forward to collaborating on these and any other challenges of
             software correctness and help bring the advances in software
-            verification closer to the industry.
+            engineering research closer to the industry.
           </p>
         </main>
 
